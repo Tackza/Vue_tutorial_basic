@@ -1,19 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <router-view />
+    
+    <Footer @onClock="onClock" title="Copyright NOW!!!" color="grey"/>
+    <span>{{time}}</span>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "../src/components/Header";
+import Footer from "../src/components/Footer";
+import moment from 'moment'
 
 export default {
-  name: 'App',
+  name: "app",
   components: {
-    HelloWorld
+    Header,
+    Footer,
+  },
+  data(){
+    return{
+      time : ""
+    }
+  },
+  methods: {
+    onClock(value){
+      this.time = moment(value).format('MM/DD/YYYY hh:mm:ss')
+    }
   }
-}
+};
 </script>
 
 <style>
@@ -23,6 +39,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
