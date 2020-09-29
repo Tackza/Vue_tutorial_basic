@@ -7,7 +7,12 @@
     <router-link to="/demo4">Computed vs Methods</router-link> |
     <router-link to="/demo5">Binding</router-link> |
     <router-link to="/demo6">Form input and V model</router-link> |
-    <router-link to="/demo7">Slot</router-link>
+    <router-link to="/demo7">Slot</router-link> |
+    <router-link to="/demo8">v-if  v-show</router-link> |
+    <router-link to="/demo9">Loop v-for</router-link> |
+    <router-link to="/demo10">State Variables</router-link> |
+    <router-link to="/demo11">Ref</router-link> |
+    <router-link to="/demo12">Filter</router-link> 
   </div>
 </template>
 

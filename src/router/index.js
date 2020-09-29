@@ -8,7 +8,11 @@ import demo4 from '../components/Demo4'
 import demo5 from '../components/Demo5'
 import demo6 from '../components/Demo6'
 import demo7 from '../components/Demo7'
-
+import demo8 from '../components/Demo8'
+import demo9 from '../components/Demo9'
+import demo10 from '../components/Demo10'
+import demo11 from '../components/Demo11'
+import demo12 from '../components/Demo12'
 Vue.use(VueRouter)
 
 const routes = [
@@ -48,16 +52,41 @@ const routes = [
         component: demo6
     },
     {
-        path : '/demo7',
-        name : 'Slot passing',
-        component : demo7
+        path: '/demo7',
+        name: 'Slot passing',
+        component: demo7
+    },
+    {
+        path: '/demo8',
+        name: 'v-if , v-show',
+        component: demo8
+    },
+    {
+        path: '/demo9',
+        name: 'Loop v-for',
+        component: demo9
+    },
+    {
+        path: '/demo10',
+        name: 'Normal State Variables',
+        component: demo10
+    },
+    {
+        path: '/demo11',
+        name: 'Ref',
+        component: demo11
+    },
+    {
+        path: '/demo12',
+        name: 'Filter',
+        component: demo12
     }
 ]
 
 const router = new VueRouter({
-    mode: 'history',
-    base: process.env.BASE_URL,
-    routes
-})
+        mode: 'history',
+        base: process.env.BASE_URL,
+        routes
+    })
 
 export default router
